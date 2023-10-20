@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap');
+
+:root{
+    --active-color: #3498db;
+    --inactive-color: #e0e0e0;
+    --background-color: #f6f7fb
+}
+
+body {
+    font-family: 'Mulish', 'sans-serif';
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.progress-steps{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    position: relative;
+}
+
+.progress-steps::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: var(--inactive-color);
+    top: 50%;
+    /*-50% de su propia altura*/
+    transform: translateY(-50%);
+    z-index: 50;
+}
+
+.progress-line{
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background-color: var(--active-color);
+    top: 50%;
+    /*-50% de su propia altura*/
+    transform: translateY(-50%);
+    z-index: 70;
+    transition: width 0.2s ease-out 0.1s;
+}
+
+
+.step{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 3px solid var(--inactive-color);
+    color: #999;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+} 
+
+.step.active {
+    border-color: var(--active-color);
+    transition: border-color 0.1s ease-in
+}
+
+.navigation-buttons {
+    width: 300px;
+    margin: auto;
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: var(--active-color);
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: var(--inactive-color);
+    cursor: not-allowed
+}
+
