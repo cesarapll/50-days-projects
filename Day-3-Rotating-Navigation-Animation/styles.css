@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Mulish:wght@400;500;700&display=swap');
+
+:root {
+  --bg-color: #333;
+  --bg-rotating-color: #fafafa;
+  --font-color: #222;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  background-color: var(--bg-color);
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--bg-rotating-color);
+  padding: 50px;
+  width: 100%;
+}
+.content {
+  width: 60%;
+  margin: auto;
+  color: var(--font-color);
+}
+
+.dog-image {
+  object-fit: cover;
+  width: 100%;
+}
+
+p,
+h3 {
+  margin: 16px 0;
+  line-height: 140%;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+  font-size: 14px;
+  margin: 0;
+}
+
+.circle-container-options {
+  width: 200px;
+  height: 200px;
+  background-color: #ff7979;
+}
+
+.hamburguer-icon {
+  width: 40px;
+  background: none;
+  border: none;
+  object-fit: cover;
+}
